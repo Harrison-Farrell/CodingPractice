@@ -1,4 +1,6 @@
+#include <iostream>
 #include <unordered_map>
+
 
 class HitCounter {
   // Use an unordered map to store the count of hits for each timestamp
@@ -17,7 +19,7 @@ class HitCounter {
     int hits = 0;
 
     for (auto& entry : hitCounts) {
-      if (timestamp - entry.first < 300) {
+      if (timestamp - entry.first < 200) {
         hits += entry.second;
       }
     }
@@ -28,18 +30,18 @@ class HitCounter {
 int main(int argc, char** argv)
 {
   HitCounter* counter = new HitCounter();
-  counter->hit(1);
-  counter->hit(3);
+  counter->hit(10);
+  counter->hit(30);
 
-  int hits4 = counter->getHits(4); // 2
+  std::cout << counter->getHits(40) << std::endl; // 2
 
-  counter->hit(6);
-  counter->hit(6); // multiple  hits for the same time
-  counter->hit(7);
+  counter->hit(60);
+  counter->hit(60); // multiple  hits for the same time
+  counter->hit(70);
 
-  int hits7 = counter->getHits(7); // 4, time 1 is out of context now
-  int hits10 = counter->getHits(10); // 3 time 3 is out of context now
-  int hits15 = counter->getHits(15); // 0 all hits are out of context now
+  std::cout << counter->getHits(80) << std::endl; // 4, time 1 is out of context now
+  std::cout << counter->getHits(150) << std::endl; // 3 time 3 is out of context now
+  std::cout << counter->getHits(300) << std::endl; // 0 all hits are out of context now
 
   return 0;
 

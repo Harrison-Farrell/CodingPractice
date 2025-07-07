@@ -9,11 +9,13 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_executable(LoggerRateLimter problems/LoggerRateLimiter.cpp)
 add_executable(AddTwoNumbers problems/AddTwoNumbers.cpp)
 add_executable(HitCounter problems/HitCounter.cpp)
+add_executable(OnlineCounter problems/OnlineCounter)
 
 set_target_properties(
   LoggerRateLimter
   AddTwoNumbers
   HitCounter
+  OnlineCounter
   PROPERTIES
   ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
   LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"

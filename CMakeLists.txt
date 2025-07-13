@@ -14,6 +14,7 @@ add_executable(HitCounter problems/HitCounter.cpp)
 add_executable(TwoSum problems/TwoSum.cpp)
 add_executable(PalindromeNumber problems/PalindromeNumber.cpp)
 add_executable(LongestCommonPrefix problems/LongestCommonPrefix.cpp)
+add_executable(MaximumNumberOfWordsYouCanType problems/MaximumNumberOfWordsYouCanType.cpp)
 
 set_target_properties(
   LoggerRateLimter
@@ -22,6 +23,7 @@ set_target_properties(
   TwoSum
   PalindromeNumber
   LongestCommonPrefix
+  MaximumNumberOfWordsYouCanType
   PROPERTIES
   ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
   LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"

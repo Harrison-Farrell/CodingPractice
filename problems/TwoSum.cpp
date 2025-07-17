@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 /*
  *
@@ -13,24 +13,20 @@
  * You can return the answer in any order.
  **/
 
-
-std::vector<int> HashMapSum(std::vector<int> number_set, int target)
-{
+std::vector<int> HashMapSum(std::vector<int> number_set, int target) {
   std::unordered_map<int, int> hash_map;
   int set_size = number_set.size();
   // Setting the value as the key, the index as the value
-  for(int i = 0; i < set_size; i++)
-  {
+  for (int i = 0; i < set_size; i++) {
     hash_map[number_set[i]] = i;
   }
 
   // Find the numbers complement. Complement = Tagart - Value;
-  for(int i = 0; i < set_size; i++)
-  {
+  for (int i = 0; i < set_size; i++) {
     int complement = target - number_set[i];
-    if(hash_map.count(complement) && hash_map[complement] != i)
-    {
-      std::cout <<  "i: " << number_set[i] << "\t j: " << complement << std::endl;
+    if (hash_map.count(complement) && hash_map[complement] != i) {
+      std::cout << "i: " << number_set[i] << "\t j: " << complement
+                << std::endl;
       return {i, hash_map[complement]};
     }
   }
@@ -38,9 +34,7 @@ std::vector<int> HashMapSum(std::vector<int> number_set, int target)
   return {};
 };
 
-
-int main(int argc, char** argv)
-{
+int main(int argc, char **argv) {
   std::vector<int> first_set = {2, 7, 11, 15};
   int first_target = 9;
 

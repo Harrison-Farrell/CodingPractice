@@ -1,0 +1,9 @@
+add_executable(StockPriceFluctuation 2034_StockPriceFluctuation.cpp)
+
+set_target_properties(
+  StockPriceFluctuation
+  PROPERTIES
+  ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+  LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)

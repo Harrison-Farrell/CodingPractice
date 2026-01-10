@@ -45,3 +45,5 @@ build/
 
 # vscode directory
 .vscode
+.vs
+.out

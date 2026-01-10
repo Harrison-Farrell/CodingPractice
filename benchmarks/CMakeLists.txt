@@ -1,0 +1,4 @@
+include(Benchmarking)
+
+AddBenchmarks(benchmark_linear_search)
+AddBenchmarks(benchmark_binary_search)

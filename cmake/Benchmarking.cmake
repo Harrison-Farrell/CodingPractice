@@ -29,7 +29,7 @@ macro(AddBenchmarks target)
 	PRIVATE benchmark::benchmark
 	PRIVATE benchmark::benchmark_main)
 	set_target_properties(${target} PROPERTIES 
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/benchmark"
 )
 
 endmacro()
